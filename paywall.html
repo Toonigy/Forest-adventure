@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate to Play</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            background-color: #0070ba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056a3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Access the Adventure Game</h1>
+    <p>To access this game, please support us with a donation using PayPal.</p>
+    <button id="donateButton">Donate and Play</button>
+
+    <script>
+        document.getElementById('donateButton').addEventListener('click', function() {
+            // Redirect to your PayPal.me link
+            window.location.href = "https://paypal.me/donateme794?country.x=US&locale.x=en_US";
+        });
+    </script>
+</body>
+</html>
