@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Game</title>
+</head>
+<body>
+    <h1>Adventure Game</h1>
+    <p id="gameContent" style="display:none;">Welcome to the game! Start your adventure here.</p>
+    <input type="password" id="password" placeholder="Enter access code">
+    <button id="submitPassword">Submit</button>
+
+    <script>
+        const ACCESS_CODE = "YOUR_SECRET_CODE"; // Replace with your secret code
+
+        document.getElementById('submitPassword').addEventListener('click', function() {
+            const enteredPassword = document.getElementById('password').value;
+            if (enteredPassword === ACCESS_CODE) {
+                document.getElementById('gameContent').style.display = "block";
+                document.getElementById('password').style.display = "none";
+                document.getElementById('submitPassword').style.display = "none";
+            } else {
+                alert("Incorrect code. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
